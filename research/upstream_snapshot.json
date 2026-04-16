@@ -1,0 +1,91 @@
+{
+  "upstream": {
+    "owner": "haotian-liu",
+    "repo": "LLaVA",
+    "source_url": "https://github.com/haotian-liu/LLaVA",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/haotian-liu__LLaVA",
+    "branch": "main",
+    "default_branch": "main",
+    "commit": "c121f0432da27facab705978f83c4ada465e46fd",
+    "fork_requested": false,
+    "fork_result": ""
+  },
+  "audit": {
+    "file_count": 175,
+    "text_file_count": 137,
+    "top_suffixes": [
+      [
+        ".py",
+        61
+      ],
+      [
+        ".sh",
+        30
+      ],
+      [
+        ".txt",
+        19
+      ],
+      [
+        ".jsonl",
+        17
+      ],
+      [
+        ".md",
+        13
+      ],
+      [
+        ".json",
+        7
+      ],
+      [
+        "<none>",
+        6
+      ],
+      [
+        ".jpg",
+        5
+      ]
+    ],
+    "style_counts": {
+      "PascalCase": 9,
+      "other": 62,
+      "hidden": 4,
+      "snake_case": 95,
+      "camelCase": 1,
+      "kebab-case": 4
+    },
+    "token_hits": {
+      "TODO": [
+        "llava/model/llava_arch.py",
+        "llava/eval/eval_gpt_review.py",
+        "llava/eval/eval_gpt_review_visual.py",
+        "llava/eval/eval_gpt_review_bench.py"
+      ],
+      "FIXME": [
+        "llava/model/llava_arch.py",
+        "llava/train/train.py",
+        "llava/serve/sglang_worker.py"
+      ]
+    },
+    "findings": [
+      "No obvious tests directory or test files detected.",
+      "No GitHub Actions workflow detected for repeatable checks.",
+      "No container packaging signal detected, which makes demos and deployment less portable.",
+      "Mixed filename conventions detected: PascalCase, kebab-case, snake_case.",
+      "Open maintenance markers detected: FIXME in 3 file(s), TODO in 4 file(s).",
+      "Large files that may benefit from decomposition: llava/train/train.py (991 lines)."
+    ],
+    "strengths": [
+      "Repository has a top-level README.",
+      "Repository exposes a dedicated docs surface."
+    ],
+    "largest_files": [
+      "llava/train/train.py (991 lines)"
+    ],
+    "has_tests": false,
+    "has_docs": true,
+    "has_ci": false,
+    "has_docker": false
+  }
+}
