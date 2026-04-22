@@ -1,95 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>LLaVA Vision Question Ops</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-slate">
-          <div class="page layout-board eyebrow-soft headline-normal modules-3 hero-align-split">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Workflow Copilot</span>
-                <h1 id="project-title">LLaVA Vision Question Ops</h1>
-                <p id="project-summary" class="lead">Build a multimodal reasoning surface for visual question answering, evidence review, and production-style image understanding demos.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>llava</li><li>multimodal</li><li>vision</li><li>llm</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Resolution Rate</span><strong>73%</strong><em>+5.8%</em></article>
-<article class='card'><span>Answer Quality</span><strong>88%</strong><em>+2.2%</em></article>
-<article class='card'><span>Ops Time Saved</span><strong>13h</strong><em>+3h</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>LLM</strong></article><article class='mini-card'><span>Domain</span><strong>Multimodal AI</strong></article><article class='mini-card'><span>Application</span><strong>Workflow Copilot</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Workflow 01</span>
-            <h2>Routing Simulator</h2>
-            <p>Preview how a request gets prioritized or routed through the workflow.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;analytics&quot;
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Simulate Route</button>
-          </div>
-          <pre class="js-output">Routing score and top signals will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Workflow 02</span>
-            <h2>Operator Brief</h2>
-            <p>Generate a concise recommended action set for the current workflow state.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for LLaVA Vision Question Ops.&quot;,
-  &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;analytics&quot;
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 59.8,
-    &quot;activation&quot;: 54.0,
-    &quot;retention&quot;: 63.6,
-    &quot;revenue&quot;: 109.6
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Generate Brief</button>
-          </div>
-          <pre class="js-output">Operator brief and recommended actions will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-  <div class="module-header">
-    <span>Workflow 03</span>
-    <h2>Grounded Prompt</h2>
-    <p>Ask a targeted question and inspect the support context behind the answer.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLaVA Vision Question Ops App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>LLaVA Vision Question Ops</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">glass-atlas</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
   </div>
-  <textarea class="js-input module-input-text">What is the top priority recommendation for LLaVA Vision Question Ops?</textarea>
-  <div class="button-row">
-    <button class="js-run" data-endpoint="/query" data-input-mode="text">Run Prompt</button>
-  </div>
-  <pre class="js-output">Grounded answer and context excerpts will appear here.</pre>
-</article>
-            </section>
-            <footer class="footer">
-              <span>Multimodal AI • LLM • Workflow Copilot</span>
-              <span>llava-vision-question-ops</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "llava-vision-question-ops", "title": "LLaVA Vision Question Ops", "project_type": "llm", "domain": "Multimodal AI", "summary": "Build a multimodal reasoning surface for visual question answering, evidence review, and production-style image understanding demos.", "tags": ["llava", "multimodal", "vision", "llm"]}, "app_archetype": "copilot", "ui_profile": {"layout": "board", "surface": "slate", "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif", "radius": 25, "shadow": 57, "eyebrow_style": "soft", "module_columns": 3, "hero_align": "split", "headline_mode": "normal"}, "app_modules": [{"label": "Workflow 01", "title": "Routing Simulator", "description": "Preview how a request gets prioritized or routed through the workflow.", "endpoint": "/score", "input_mode": "json", "cta": "Simulate Route", "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"analytics\"\n  }\n}", "hint": "Routing score and top signals will appear here.", "span": "normal"}, {"label": "Workflow 02", "title": "Operator Brief", "description": "Generate a concise recommended action set for the current workflow state.", "endpoint": "/recommend", "input_mode": "json", "cta": "Generate Brief", "prefill": "{\n  \"prompt\": \"Recommend the next best action for LLaVA Vision Question Ops.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"analytics\"\n  },\n  \"metrics\": {\n    \"acquisition\": 59.8,\n    \"activation\": 54.0,\n    \"retention\": 63.6,\n    \"revenue\": 109.6\n  }\n}", "hint": "Operator brief and recommended actions will appear here.", "span": "wide"}, {"label": "Workflow 03", "title": "Grounded Prompt", "description": "Ask a targeted question and inspect the support context behind the answer.", "endpoint": "/query", "input_mode": "text", "cta": "Run Prompt", "prefill": "What is the top priority recommendation for LLaVA Vision Question Ops?", "hint": "Grounded answer and context excerpts will appear here.", "span": "normal"}], "sample_features": {"query": "Summarize the highest priority risk and recommended next step.", "audience": "analytics"}, "sample_metrics": {"acquisition": 59.8, "activation": 54.0, "retention": 63.6, "revenue": 109.6}, "knowledge_base": ["LLaVA Vision Question Ops is positioned as a Multimodal AI starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Build a multimodal reasoning surface for visual question answering, evidence review, and production-style image understanding demos.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on llava, multimodal, vision, llm.", "Source paper: Visual Instruction Tuning", "Official repo: https://github.com/haotian-liu/LLaVA", "Production differentiation focus: Wrap the upstream multimodal ai capability in a reviewable operator workflow instead of a single demo script.; Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.; Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."], "dashboard_metrics": [{"label": "Resolution Rate", "value": "73%", "delta": "+5.8%"}, {"label": "Answer Quality", "value": "88%", "delta": "+2.2%"}, {"label": "Ops Time Saved", "value": "13h", "delta": "+3h"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+  <script>window.PROJECT_MANIFEST = {"slug": "llava-vision-question-ops", "title": "LLaVA Vision Question Ops", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "88%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "glass-atlas", "theme": {"bg": "#10070a", "surface": "#1b1116", "ink": "#fff2ec", "muted": "#c7a49b", "accent": "#ff8b61", "accent2": "#ffd166"}, "pages_url": "https://r-behera.github.io/llava-vision-question-ops/", "api_examples": {"health": {"status": "ok", "project": "llava-vision-question-ops"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
